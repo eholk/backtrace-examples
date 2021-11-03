@@ -1,0 +1,108 @@
+    Finished dev [unoptimized + debuginfo] target(s) in 0.14s
+     Running `target\debug\async-tokio.exe`
+thread 'main' panicked at 'explicit panic', C:\Users\ericholk\repo\backtrace-examples\async-common\src\lib.rs:10:5
+stack backtrace:
+   0:     0x7ff7986d431e - std::backtrace_rs::backtrace::dbghelp::trace
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\..\..\backtrace\src\backtrace\dbghelp.rs:98
+   1:     0x7ff7986d431e - std::backtrace_rs::backtrace::trace_unsynchronized
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\..\..\backtrace\src\backtrace\mod.rs:66
+   2:     0x7ff7986d431e - std::sys_common::backtrace::_print_fmt
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\sys_common\backtrace.rs:67
+   3:     0x7ff7986d431e - std::sys_common::backtrace::_print::impl$0::fmt
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\sys_common\backtrace.rs:46
+   4:     0x7ff7986e4a8a - core::fmt::write
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\core\src\fmt\mod.rs:1150
+   5:     0x7ff7986d22a8 - std::io::Write::write_fmt<std::sys::windows::stdio::Stderr>
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\io\mod.rs:1667
+   6:     0x7ff7986d6c96 - std::sys_common::backtrace::_print
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\sys_common\backtrace.rs:49
+   7:     0x7ff7986d6c96 - std::sys_common::backtrace::print
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\sys_common\backtrace.rs:36
+   8:     0x7ff7986d6c96 - std::panicking::default_hook::closure$1
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:210
+   9:     0x7ff7986d6784 - std::panicking::default_hook
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:227
+  10:     0x7ff7986d72f5 - std::panicking::rust_panic_with_hook
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:624
+  11:     0x7ff7986d6eaf - std::panicking::begin_panic_handler::closure$0
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:519
+  12:     0x7ff7986d4c67 - std::sys_common::backtrace::__rust_end_short_backtrace<std::panicking::begin_panic_handler::closure$0,never$>
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\sys_common\backtrace.rs:141
+  13:     0x7ff7986d6e39 - std::panicking::begin_panic_handler
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:517
+  14:     0x7ff7986ea170 - core::panicking::panic_fmt
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\core\src\panicking.rs:101
+  15:     0x7ff7986ea0bc - core::panicking::panic
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\core\src\panicking.rs:50
+  16:     0x7ff798631d9f - common::baz::generator$0
+                               at C:\Users\ericholk\repo\backtrace-examples\async-common\src\lib.rs:10
+  17:     0x7ff798632139 - core::future::from_generator::impl$1::poll<common::baz::generator$0>
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\core\src\future\mod.rs:80
+  18:     0x7ff798631ccb - common::bar::generator$0
+                               at C:\Users\ericholk\repo\backtrace-examples\async-common\src\lib.rs:6
+  19:     0x7ff7986320a9 - core::future::from_generator::impl$1::poll<common::bar::generator$0>
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\core\src\future\mod.rs:80
+  20:     0x7ff798631ef2 - common::foo::generator$0
+                               at C:\Users\ericholk\repo\backtrace-examples\async-common\src\lib.rs:2
+  21:     0x7ff798632019 - core::future::from_generator::impl$1::poll<common::foo::generator$0>
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\core\src\future\mod.rs:80
+  22:     0x7ff798635718 - async_tokio::main::generator$0
+                               at C:\Users\ericholk\repo\backtrace-examples\async-tokio\src\main.rs:4
+  23:     0x7ff7986321c9 - core::future::from_generator::impl$1::poll<async_tokio::main::generator$0>
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\core\src\future\mod.rs:80
+  24:     0x7ff798631b9a - tokio::park::thread::impl$5::block_on::closure$0<core::future::from_generator::GenFuture<async_tokio::main::generator$0> >
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\park\thread.rs:263
+  25:     0x7ff798632df9 - tokio::coop::with_budget::closure$0<enum$<core::task::poll::Poll<tuple$<> > >,tokio::park::thread::impl$5::block_on::closure$0>
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\coop.rs:106
+  26:     0x7ff798632652 - std::thread::local::LocalKey<core::cell::Cell<tokio::coop::Budget> >::try_with<core::cell::Cell<tokio::coop::Budget>,tokio::coop::with_budget::closure$0,enum$<core::task::poll::Poll<tuple$<> > > >
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\std\src\thread\local.rs:399
+  27:     0x7ff79863251d - std::thread::local::LocalKey<core::cell::Cell<tokio::coop::Budget> >::with<core::cell::Cell<tokio::coop::Budget>,tokio::coop::with_budget::closure$0,enum$<core::task::poll::Poll<tuple$<> > > >
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\std\src\thread\local.rs:375
+  28:     0x7ff79863165c - tokio::coop::with_budget
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\coop.rs:99
+  29:     0x7ff79863165c - tokio::coop::budget
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\coop.rs:76
+  30:     0x7ff79863165c - tokio::park::thread::CachedParkThread::block_on<core::future::from_generator::GenFuture<async_tokio::main::generator$0> >
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\park\thread.rs:263
+  31:     0x7ff7986358b4 - tokio::runtime::enter::Enter::block_on<core::future::from_generator::GenFuture<async_tokio::main::generator$0> >
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\runtime\enter.rs:151
+  32:     0x7ff798631046 - tokio::runtime::thread_pool::ThreadPool::block_on<core::future::from_generator::GenFuture<async_tokio::main::generator$0> >
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\runtime\thread_pool\mod.rs:77
+  33:     0x7ff798632b68 - tokio::runtime::Runtime::block_on<core::future::from_generator::GenFuture<async_tokio::main::generator$0> >
+                               at C:\Users\ericholk\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-1.13.0\src\runtime\mod.rs:463
+  34:     0x7ff798632ca3 - async_tokio::main
+                               at C:\Users\ericholk\repo\backtrace-examples\async-tokio\src\main.rs:4
+  35:     0x7ff7986332ab - core::ops::function::FnOnce::call_once<void (*)(),tuple$<> >
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\core\src\ops\function.rs:227
+  36:     0x7ff7986311fb - std::sys_common::backtrace::__rust_begin_short_backtrace<void (*)(),tuple$<> >
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\std\src\sys_common\backtrace.rs:125
+  37:     0x7ff798631121 - std::rt::lang_start::closure$0<tuple$<> >
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\std\src\rt.rs:63
+  38:     0x7ff7986d7886 - core::ops::function::impls::impl$2::call_once
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\core\src\ops\function.rs:259
+  39:     0x7ff7986d7886 - std::panicking::try::do_call
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:403
+  40:     0x7ff7986d7886 - std::panicking::try
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:367
+  41:     0x7ff7986d7886 - std::panic::catch_unwind
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panic.rs:129
+  42:     0x7ff7986d7886 - std::rt::lang_start_internal::closure$2
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\rt.rs:45
+  43:     0x7ff7986d7886 - std::panicking::try::do_call
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:403
+  44:     0x7ff7986d7886 - std::panicking::try
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panicking.rs:367
+  45:     0x7ff7986d7886 - std::panic::catch_unwind
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\panic.rs:129
+  46:     0x7ff7986d7886 - std::rt::lang_start_internal
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\/library\std\src\rt.rs:45
+  47:     0x7ff7986310ef - std::rt::lang_start<tuple$<> >
+                               at /rustc/59eed8a2aac0230a8b53e89d4e99d55912ba6b35\library\std\src\rt.rs:62
+  48:     0x7ff798632d46 - main
+  49:     0x7ff7986e8dd0 - invoke_main
+                               at d:\a01\_work\6\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+  50:     0x7ff7986e8dd0 - __scrt_common_main_seh
+                               at d:\a01\_work\6\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+  51:     0x7ffbe0a26ab0 - BaseThreadInitThunk
+  52:     0x7ffbe1771dbb - RtlUserThreadStart
+error: process didn't exit successfully: `target\debug\async-tokio.exe` (exit code: 101)
